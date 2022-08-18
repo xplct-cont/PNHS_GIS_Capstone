@@ -54,12 +54,13 @@
                 <input type="file" name="avatar">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"><br><br>
                 <div class="btv">
-                <input type="submit" class="btn btn-sm btn-success" >
+                <input type="submit" class="btn btn-sm btn-success mt-2" >
                <div class="table elevation-2 bg-secondary rounded" style="width: 405px; margin:auto; position:absolute; left 10px; top: -60px;">
                 <div class="edit">
                     <a href="{{url('useredit-user/' .$user->id)}}" class="fas fa-edit" style="color: orange;"></a>
                 </div>
                 
+               <b>&nbsp;Name: &nbsp;</b>{{$user->name}} <br>
                <b>&nbsp;Advisory: &nbsp;</b>{{$user->advisory}} <br>
                <b>&nbsp;Email: &nbsp;</b>{{$user->email}} <br>
                <b>&nbsp;Address: &nbsp;</b> {{$user->address}} <br>

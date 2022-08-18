@@ -17,7 +17,7 @@
 
      <div class="container">
          <div class="row">
-             <div class="col-md-6" style="margin:auto; top: 30px;">
+             <div class="col-md-6" style="margin:auto; top: 10px;">
 
 
                  <div class="card elevation-2">
@@ -31,6 +31,11 @@
                          @csrf
                          @method('PUT')
                          
+
+                         <div class="form-group mb-3">
+                            <label for="" style="color:dimgray;">Name</label>
+                            <input type="text" name="name" value="{{$user->name}}" class="form-control">
+                        </div>
                          <div class="form-group mb-3">
                             <label for="" style="color:dimgray;">Advisory</label>
                             <input type="text" name="advisory" value="{{$user->advisory}}" class="form-control">
