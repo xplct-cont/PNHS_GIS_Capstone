@@ -38,7 +38,7 @@
 
 <body>
     
-<div class="card elevation-4" style="width: 440px; height: 450px; margin:auto; top: 30px;">
+<div class="card elevation-4" style="width: 440px; height: 440px; margin:auto; top: 20px;">
     <div class="card-header bg-info elevation-2">
         <h5>Administrator Profile Info</h5>
     </div>
