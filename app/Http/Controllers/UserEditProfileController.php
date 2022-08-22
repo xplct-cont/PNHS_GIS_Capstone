@@ -67,7 +67,10 @@ class UserEditProfileController extends Controller
             $user->email = $request->input('email');
             $user->address = $request->input('address');
             $user->contact_no = $request->input('contact_no');
+            $user->password = bcrypt($request->password);
         
+    
+            
             $user->update();
             return redirect('usereditprofile');
           
