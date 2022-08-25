@@ -49,7 +49,7 @@
 
             <img src="/images/avatars/{{$user->avatar}}" style="width: 150px; height:150px; border-radius: 50%; float:left; margin-right:25px; background-color: #5bc0de; padding-top:5px; padding-left:5px; padding-right:5px; padding-bottom:5px;">
           
-             <form enctype="multipart/form-data" action="/editprofile" method="POST">   
+             <form enctype="multipart/form-data" action="/admineditprofile" method="POST">   
                 <label>Update Profile Image</label><br>
                 <input type="file" name="avatar">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"><br><br>
@@ -57,7 +57,7 @@
                 <input type="submit" class="btn btn-sm btn-success mt-5" >
                <div class="table elevation-2 bg-secondary rounded" style="width: 405px; margin:auto; position:absolute; left 10px; top: -60px;">
                 <div class="edit">
-                    <a href="{{url('edit-user/' .$user->id)}}" class="fas fa-edit" style="color: orange;"></a>
+                    <a href="{{url('edit-info/' .$user->id)}}" class="fas fa-edit" style="color: orange;"></a>
                 </div>
                 
                <b>&nbsp;Name: &nbsp;</b>{{$user->name}} <br>

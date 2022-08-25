@@ -1,6 +1,6 @@
 <ul style="position:relative; left: -36px; margin:auto; height: 50px;">
    <li class="nav-item"> 
-    <a href="{{url('/usereditprofile')}}">
+    <a href="{{url('/advisereditprofile.php')}}">
               <img src="/images/avatars/{{Auth::user()->avatar}}"
                  class="user-image img-circle elevation-4" alt="User Image" style="width: 37px; height:37px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
                   <span class="d-none d-md-inline" style="font-size: 13px; font-weight:bold; margin:auto; color:whitesmoke;">{{ Auth::user()->name }}</span><br></a>
@@ -10,12 +10,22 @@
         </ul>  
     
 <li class="nav-item">
-    <a href="{{ route('userhome') }}"
-       class="nav-link {{ Request::is('userhome*') ? '' : '' }}">
+    <a href="{{ route('adviserhome') }}"
+       class="nav-link {{ Request::is('adviserhome*') ? '' : '' }}">
         <p>Dashboard</p>
         <i class="fas fa-tachometer-alt fa-pull-left fa-md "></i>
     </a>
 </li>
+
+
+<li class="nav-item">
+    <a href="{{ route('students.php') }}"
+       class="nav-link {{ Request::is('students.php*') ? '' : '' }}">
+        <p>Students</p>
+        <i class="fas fa-user-tie fa-pull-left fa-md "></i>
+    </a>
+</li>
+
 
 
 {{-- <li class="user-footer" style=" margin-top: 415px; margin-left: 18px;">

@@ -1,6 +1,6 @@
 
 <aside class="main-sidebar sidebar-light elevation-0">
-    <a href="{{ route('userhome') }}" class="brand-link bg-info">
+    <a href="{{ route('adviserhome') }}" class="brand-link bg-info">
         <img src="{{url('/images/image17.png')}}"
              alt="{{ config('app.name') }} Logo"
              class="brand-image img-circle elevation-3">

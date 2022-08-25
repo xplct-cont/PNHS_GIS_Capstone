@@ -69,7 +69,7 @@ class EditProfileController extends Controller
             $user->contact_no = $request->input('contact_no');
         
             $user->update();
-            return redirect('editprofile');
+            return redirect('admineditprofile.php');
           
          }
 

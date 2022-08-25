@@ -34,7 +34,7 @@ class LoginController extends Controller
             return 'home';
 
         }else{
-            return 'userhome';
+            return 'adviserhome';
 
         }
       }

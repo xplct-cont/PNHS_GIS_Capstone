@@ -33,11 +33,11 @@
                  <div class="card elevation-2 text-dark">
                      <div class="card-header bg-info elevation-2">
                          <h4 style="position: absolute; left:25%; color:white; top: 10px; margin:auto;">Edit Your Informations</h4>
-                         <a href="{{url('editprofile')}}" class="btn btn-danger float-start" >Back</a>
+                         <a href="{{url('admineditprofile.php')}}" class="btn btn-danger float-start" >Back</a>
                      </div>
                      <div class="card-body">
 
-                        <form action="{{url('update-user/'.$user->id)}}" class="contact-form" method="POST">
+                        <form action="{{url('update-info/'.$user->id)}}" class="contact-form" method="POST">
                          @csrf
                          @method('PUT')
                          

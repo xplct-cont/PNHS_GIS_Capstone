@@ -7,9 +7,10 @@ use App\Http\Controllers\CodeController;
 // use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\EditProfileController;
 use App\Http\Controllers\API\UserController;
-use App\Http\Controllers\UserHomeController;
-use App\Http\Controllers\UserEditProfileController;
+use App\Http\Controllers\AdviserHomeController;
+use App\Http\Controllers\AdviserEditProfileController;
 use App\Http\Controllers\EditAdviserController;
+use App\Http\Controllers\AdviserStudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -77,34 +78,40 @@ Route::group(['middleware' => ['auth', 'admin']], function (){
 
 
 
-//for admin /////////////////////////////////////////////////////////////////////////
+//For Admin Profile Only /////////////////////////////////////////////////////////////////////////
 
 
-Route::get('/editprofile', [
+Route::get('/admineditprofile.php', [
     EditProfileController::class, 'index'
-])->name('editprofile');
+])->name('admineditprofile.php');
 
 
-Route::post('/editprofile', [EditProfileController::class, 'update_avatar']);
+Route::post('/admineditprofile', [EditProfileController::class, 'update_avatar']);
 
-Route::get('/edit-user/{id}', [EditProfileController::class, 'edit']);
-Route::put('/update-user/{id}', [EditProfileController::class, 'update']);
-
-
-
-//for users ////////////////////////////////////////////////////////////////////
-
-Route::get('/userhome', [
-   UserHomeController::class, 'index'
-])->name('userhome');
-
-Route::get('/usereditprofile', [
-    UserEditProfileController::class, 'index'
-])->name('usereditprofile');
+Route::get('/edit-info/{id}', [EditProfileController::class, 'edit']);
+Route::put('/update-info/{id}', [EditProfileController::class, 'update']);
 
 
-Route::post('/usereditprofile', [UserEditProfileController::class, 'update_avatar']);
 
-Route::get('/useredit-user/{id}', [UserEditProfileController::class, 'edit']);
-Route::put('/userupdate-user/{id}', [UserEditProfileController::class, 'update']);
+//For Adviser ////////////////////////////////////////////////////////////////////
+
+Route::get('/adviserhome', [
+   AdviserHomeController::class, 'index'
+])->name('adviserhome');
+
+
+Route::get('/students.php', [
+    AdviserStudentController::class, 'index'
+ ])->name('students.php');
+
+
+//For Adviser Profile Only///////////////////////////////////////////////////////////////////
+ Route::get('/advisereditprofile.php', [
+    AdviserEditProfileController::class, 'index'
+])->name('advisereditprofile.php');
+
+Route::post('/advisereditprofile', [AdviserEditProfileController::class, 'update_avatar']);
+
+Route::get('/adviseredit-info/{id}', [AdviserEditProfileController::class, 'edit']);
+Route::put('/adviserupdate-info/{id}', [AdviserEditProfileController::class, 'update']);
 

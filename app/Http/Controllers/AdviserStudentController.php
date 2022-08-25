@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserHomeController extends Controller
+class AdviserStudentController extends Controller
 {
+    
     public function index()
     {
-        return view('user.userhome');
+        return view('adviser.adviserstudents');
 
     }
 
@@ -16,5 +17,7 @@ class UserHomeController extends Controller
     {
         $this->middleware('auth');
     }
+
+
 
 }

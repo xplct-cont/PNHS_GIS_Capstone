@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Image;
 use App\Models\User;
 
-class UserEditProfileController extends Controller
+class AdviserEditProfileController extends Controller
 {
        /**
      * Create a new controller instance.
@@ -29,7 +29,7 @@ class UserEditProfileController extends Controller
     {
 
         //Show Edit Profile    
-           return view('user.editprofile', array('user'=>Auth::user()));
+           return view('adviser.editprofile', array('user'=>Auth::user()));
            $user = User::all();
         
    }
@@ -47,7 +47,7 @@ class UserEditProfileController extends Controller
              $user->save();
 
          }
-         return view('user.editprofile', array('user'=>Auth::user()));
+         return view('adviser.editprofile', array('user'=>Auth::user()));
 
    
    
@@ -56,7 +56,7 @@ class UserEditProfileController extends Controller
 
         public function edit($id){
             $user = User::find($id);
-            return view('user.editprofilename', compact('user'));
+            return view('adviser.editprofilename', compact('user'));
         }
 
 
@@ -73,7 +73,7 @@ class UserEditProfileController extends Controller
     
             
             $user->update();
-            return redirect('usereditprofile');
+            return redirect('advisereditprofile.php');
           
          }
 

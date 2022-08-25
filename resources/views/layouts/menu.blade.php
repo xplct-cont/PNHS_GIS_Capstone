@@ -1,6 +1,6 @@
 <ul style="position:relative; left: -38px; margin:auto; height: 50px;">
    <li class="nav-item"> 
-    <a href="{{url('/editprofile')}}">
+    <a href="{{url('/admineditprofile.php')}}">
               <img src="/images/avatars/{{Auth::user()->avatar}}"
                  class="user-image img-circle elevation-4" alt="User Image" style="width: 37px; height:37px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
                   <span class="d-none d-md-inline" style="font-size: 13px; font-weight:bold; margin:auto; color:whitesmoke;">{{ Auth::user()->name }}</span><br></a>
