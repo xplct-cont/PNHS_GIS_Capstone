@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Image;
 use App\Models\User;
 
@@ -67,7 +68,7 @@ class UserEditProfileController extends Controller
             $user->email = $request->input('email');
             $user->address = $request->input('address');
             $user->contact_no = $request->input('contact_no');
-            $user->password = bcrypt($request->password);
+            // $user->password = Hash::make($request->password);
         
     
             

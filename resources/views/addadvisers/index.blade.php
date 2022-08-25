@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-header elevation-2">
                         <h4 style="position: absolute; left:38%; color:dimgray;">Senior High Advisers</h4>
-                        <a href="{{url('add-adviser')}}" class="btn btn-info float-start" >Add Adviser</a>
+                        <a href="{{url('add-adviser')}}" class="btn btn-info float-start" >Register Adviser</a>
                     </div>
                     <div class="card-body">
 

@@ -30,9 +30,9 @@
                     
                 @endif
 
-                 <div class="card elevation-4">
+                 <div class="card elevation-4 text-dark">
                      <div class="card-header bg-info elevation-2">
-                         <h4 style="position: absolute; left:34%; color:whitesmoke; margin:auto;">Add New Adviser</h4>
+                         <h4 style="position: absolute; left:34%; color:whitesmoke; margin:auto;">Register Adviser</h4>
                          <a href="{{url('advisers')}}" class="btn btn-danger float-start" >Back</a>
                      </div>
                      <div class="card-body">
@@ -65,8 +65,12 @@
                                 <label for="">Contact No</label>
                                 <input type="text" name="contact_no" class="form-control"  required>
                            
-                                <label for="">Password</label>
-                                <input type="password" name="password" class="form-control"  required>
+                            </div>
+
+                              <div class="form-section">
+                               <label for="">Password</label> 
+                               <input type="text" name="password" class="form-control"  required>
+                          
                             </div>
                      
                                <div class="form-navigation">
@@ -143,6 +147,7 @@
             list-style-type:none;
             color:red;
         }
+      
     </style>
 
 @endsection

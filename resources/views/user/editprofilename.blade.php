@@ -33,7 +33,7 @@
                 @endif
 
 
-                 <div class="card elevation-2">
+                 <div class="card elevation-2 text-dark">
                      <div class="card-header bg-info elevation-2">
                          <h4 style="position:absolute; left:25%; color:white; top: 10px; margin:auto;">Edit Your Informations</h4>
                          <a href="{{url('usereditprofile')}}" class="btn btn-danger float-start">Back</a>
@@ -62,9 +62,10 @@
                             
                             <label for="" style="color: dimgray;">Contact Number</label>
                             <input type="text" name="contact_no" value="{{$user->contact_no}}" class="form-control" required>
-                               
-                            <label for="" style="color: dimgray;">Create New Password</label>
-                            <input type="password" name="password"  class="form-control" required>
+                                                      
+                            {{-- <label for="" style="color: dimgray;">Create New Password</label>
+                            <input type="password" name="password"  class="form-control @error('password') is-invalid @enderror">
+                           --}}
                             </div>
 
                              <div class="form-navigation">

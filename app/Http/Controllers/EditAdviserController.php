@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
+use App\Rules\MatchOldPassword;
 use Flash;
 use Response;
 
@@ -22,7 +24,7 @@ class EditAdviserController extends Controller
 
     public function index()
     {
-        $user = User::all();
+        $user = User::all()->sortBy('usertype');
         return view('addadvisers.index', compact('user'));
       
    }
@@ -37,7 +39,6 @@ class EditAdviserController extends Controller
 
    public function register(Request $request) {
     $validator = Validator::make($request->all(), [
-        'role' => 'required',
         'advisory' => 'required',
         'name' => 'required',
         'username' => 'required',
@@ -45,11 +46,11 @@ class EditAdviserController extends Controller
         'email' => 'required|email',
         'address' => 'required',
         'contact_no' => 'required',
-        'password' => 'required',
+        'password' => 'required|confirmed',
+
     ]);
 
     $user = User::create([
-        'role' => $request->usertype,
         'advisory' => $request->advisory,
         'name' => $request->name,
         'username' => $request->username,  
@@ -57,7 +58,8 @@ class EditAdviserController extends Controller
         'email' => $request->email,
         'address' => $request->address,
         'contact_no' => $request->contact_no
-,       'password' => bcrypt($request->password),
+,       'password' => Hash::make($request['password']),
+     
     ]);
 
     $user->save();
@@ -92,6 +94,7 @@ class EditAdviserController extends Controller
         $user->usertype = $request->input('usertype');
         $user->username = $request->input('username');
         $user->advisory = $request->input('advisory');
+     
        
         if($request->hasFile('avatar')){
   

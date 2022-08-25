@@ -19,7 +19,7 @@
          <div class="row">
              <div class="col-md-7"  style="positon:relative; top:10px; margin:auto;">
 
-                 <div class="card elevation-2" style="height: 540px;">
+                 <div class="card elevation-2" style="height: 500px;">
                      <div class="card-header bg-dark elevation-2">
                          <h4 style="position: absolute; left:33%; color:whitesmoke; margin:auto;">Adviser Informations</h4>
                          <a href="{{url('advisers')}}" class="btn btn-danger float-start text-white">Back</a>
@@ -31,12 +31,15 @@
                          @method('GET')
                          
                          <div class="bb">
-                                <img src="{{url('/images/bbbbb.png')}}" style="position:relative; height:100%; width:100%; background-position:center; background-repeat:no-repeat; background-size: cover;  ">
-                        </div>
-                                <img src="{{asset('images/avatars/'.$user->avatar)}}" class="img-circle elevation-4"  style=" margin:auto; position:relative; top: -60px; left: 30px; margin:auto; width:130px; height:130px; border-radius:50%;
-                                 background-color:#5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;" >
+                                <img src="{{url('/images/bbbb.png')}}" style="position:relative; height:100px; width:100%; background-position:center; background-repeat:no-repeat; background-size: cover;  ">
+                            </div>
+                            <h1 class="text-center" style="position:relative; top:-90px; font-size: 20px; margin:auto;">Pangangan National High School</h1>
+                            <h2 class="text-center" style="position:relative; top:-80px; font-size: 17px; margin:auto; color:whitesmoke;">Talisay, Calape, Bohol</h2>
+                            <h5 class="text-center text-dark" style="margin:auto; position:relative; top:-42px; font-size: 18px;">School ID: 302882</h5>
+               
                                
-                                 <div class="card elevation-4 bg-dark" style="height: 210px; margin-top:-43px;">
+                                 <div class="card elevation-4 bg-dark" style="height: 270px; margin-top:-40px;">
+                                    <img src="{{asset('images/avatars/'.$user->avatar)}}" class="img-circle elevation-4" style="position:relative; left: 20px; top: 10px; width:80px; height:80px; border-radius:50%;  background-color:#5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
                                  <p style="color: 	#F5FFFA; position: relative; font-size: 16px; margin-left:20px; top: 20px;" >Name:&nbsp;&nbsp;{{$user->name}}</p>
                                  <p style="color: 	#F5FFFA; position: relative;  font-size: 16px; margin-left:20px; top: 2px;" >Username:&nbsp;&nbsp;{{$user->username}}</p>
                                  <p style="color: 	#F5FFFA; position: relative;  font-size: 16px; margin-left:20px; top: -15px;" >Role:&nbsp;&nbsp;{{$user->usertype}}</p>
@@ -44,6 +47,8 @@
                                  <p style="color: 	#F5FFFA; position: relative;  font-size: 16px; margin-left:20px; top: -52px;" >Email:&nbsp;&nbsp;{{$user->email}}</p>
                                  <p style="color: 	#F5FFFA; position: relative;  font-size: 16px; margin-left:20px; top: -70px;" >Address:&nbsp;&nbsp;{{$user->address}}</p>
                                  <p style="color: 	#F5FFFA; position: relative;  font-size: 16px; margin-left:20px; top: -88px;" >Contact No:&nbsp;&nbsp;{{$user->contact_no}}</p>
+                                 
+                               
                                 </div>
                         
                         </div>
