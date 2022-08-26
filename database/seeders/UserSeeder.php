@@ -19,9 +19,9 @@ class UserSeeder extends Seeder
           
         $users = [
             [
-                'name' => 'Jasmin Secusana',
+                'name' => 'Kenn Secusana',
                 'username' => '10546',
-                'email' => 'jasminsecusana@gmail.com',
+                'email' => 'kennsecusana@gmail.com',
                 'address' => 'Looc, Calape, Bohol',
                 'contact_no' => '0936-165-2608',
                 'usertype' => 'admin',
@@ -30,15 +30,15 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('jas123'),
             ],
             [
-                'name' => 'Gerome Nalla',
+                'name' => 'Severus Snape',
                 'username' => '10547',
-                'email' => 'geromenalla@gmail.com',
+                'email' => 'sev@gmail.com',
                 'address' => 'Lomboy, Calape, Bohol',
                 'contact_no' => '0912-345-6789',
                 'advisory' => 'Grade 11-Faith',
                 'usertype' => 'adviser',
                 'email_verified_at' => Carbon::now(),
-                'password' => bcrypt('gerome123'),
+                'password' => bcrypt('sev123'),
             ],
            
 

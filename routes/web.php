@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\AdviserHomeController;
 use App\Http\Controllers\AdviserEditProfileController;
 use App\Http\Controllers\EditAdviserController;
 use App\Http\Controllers\AdviserStudentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,6 +74,7 @@ Route::group(['middleware' => ['auth', 'admin']], function (){
         EditAdviserController::class, 'destroy']);
     Route::get('/show-adviser/{id}', [
         EditAdviserController::class, 'show']);
+  
     
 });
 

@@ -44,11 +44,11 @@
      <nav class="main-header navbar navbar-expand navbar-info navbar-light">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            <li class="nav-item"> 
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i><h2 style="position:relative; margin:auto; left:23px; top:-21.2px; font-size:16px; color:white;">{{date('Y-m-d')}}</h2></a>
             </li>
         </ul>
-
+            
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown user-menu">
                 {{-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -56,6 +56,7 @@
                          class="user-image img-circle elevation-2" alt="User Image">
                     <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
                 </a> --}}
+                
                 <a href="#" class=""
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <h2 style="font-size: 16px; margin:auto;">&nbsp;Logout</h2>
